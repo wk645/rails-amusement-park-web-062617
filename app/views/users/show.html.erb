@@ -1,0 +1,14 @@
+<% if @user.admin %>
+	<h1><u><%= "ADMIN" %></h1></u>
+<% end %><br>
+<ul><h4>
+	<li>Name: <%= @user.name %></li>
+	<li>Tickets: <%= @user.tickets %></li>
+	<li>Mood: <%= @user.mood %></li>
+	<li>Height: <%= @user.height %></li>
+</ul></h4>
+<br>
+<%= flash[:message] %>
+<br>
+<%= link_to "See attractions", attractions_path %><br>
+<%= link_to "Log Out", session_path, method: :delete %>
